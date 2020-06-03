@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Enrol students</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+
+</head>
+<body>
+
+<div class="navbar">
+    <div class="dropdown">
+        <button class="dropbtn">Lejeaftaler
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="/rentaloverview">Lejeaftale Oversigt</a>
+            <a href="/carsearch">Søg og opret lejeaftale</a>
+        </div>
+
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn">Medarbejdere
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="/employees">Medarbejder Oversigt</a>
+            <a href="/createemployee">Opret ny medarbejder</a>
+        </div>
+
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn">Kunder
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="/customers">Kunde Oversigt</a>
+            <a href="/createcustomer">Opret en ny kunde</a>
+        </div>
+
+    </div>
+
+
+    <div class="dropdown">
+        <button class="dropbtn">Motorhomes
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="/motorhomeoverview">Motorhome Oversigt</a>
+            <a href="/createmotorhome">Opret et nyt motorhome</a>
+            <a href="/addtofleet">Tilføj motorhome til udvalg</a>
+
+        </div>
+
+    </div>
+
+
+
+</div>
+
+    <h1>Motorhome Search</h1>
+    <form action="/searchresult" method="post"> <!-- dette sker når vi klikker på submit (action)-->
+
+        <label for="maxSeats">Antal Senge:</label><br>
+        <input type="number" name="maxSeats" id="maxSeats" min="2" max="6">
+        <br>
+        <label for="pricePerDay">Maksimale pris per dag:</label><br>
+        <input type="number" name="pricePerDay" id="pricePerDay">
+        <br>
+        <label for="pickupDate">Start Dato - yyyy-mm-dd:</label><br>
+        <input type="text" name="pickupDate" id="pickupDate"  pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])">
+        <br>
+        <label for="endDate"> Slut Dato - yyyy-mm-dd:</label><br>
+        <input type="text"  name="endDate" id="endDate" pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])"  required>
+        <br>
+
+
+
+        <button type="submit" name="submit" button class="btn btn-create">Search</button>
+    </form>
+</div>
+
+
+
+
+
+</body>
+</html>

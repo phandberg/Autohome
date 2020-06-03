@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Administration</title>
+    <!-- stylesheet -->
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+
+</head>
+<body>
+
+<div class="navbar">
+    <div class="dropdown">
+        <button class="dropbtn">Lejeaftaler
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="/rentaloverview">Lejeaftale Oversigt</a>
+            <a href="/carsearch">Søg og opret lejeaftale</a>
+        </div>
+
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn">Medarbejdere
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="/employees">Medarbejder Oversigt</a>
+            <a href="/createemployee">Opret ny medarbejder</a>
+        </div>
+
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn">Kunder
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="/customers">Kunde Oversigt</a>
+            <a href="/createcustomer">Opret en ny kunde</a>
+        </div>
+
+    </div>
+
+
+    <div class="dropdown">
+        <button class="dropbtn">Motorhomes
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="/motorhomeoverview">Motorhome Oversigt</a>
+            <a href="/createmotorhome">Opret et nyt motorhome</a>
+            <a href="/addtofleet">Tilføj motorhome til udvalg</a>
+
+        </div>
+
+    </div>
+
+
+
+</div>
+
+    <h1>Medarbejdere</h1>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Fornavn</th>
+            <th>Efternavn</th>
+            <th>Fødselsdato</th>
+            <th>E-mail</th>
+            <th>Job</th>
+        </tr>
+        <tr th:each="ansat : ${employeelist}">
+            <td th:text="${ansat.employeeId}"></td>
+            <td th:text="${ansat.employeeFirstName}"></td>
+            <td th:text="${ansat.employeeLastName}"></td>
+            <td th:text="${ansat.employeeBirthday}"></td>
+            <td th:text="${ansat.employeeEmail}"></td>
+            <td th:text="${ansat.employeeJob}"></td>
+            <td><a th:href="@{/employee(employeeId=${ansat.employeeId})}"><button class="btn btn-details"> Details</button></a></th>
+            <td><a th:href="@{/deleteemployee(employeeId=${ansat.employeeId})}"><button class="btn btn-del"> Delete</button></a></th>
+            <td><a th:href="@{/updateemployee(employeeId=${ansat.employeeId})}"><button class="btn btn-ed"> Update</button></a></th>
+
+
+
+        </tr>
+
+
+    </table>
+</div>
+</body>
+</html>

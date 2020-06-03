@@ -1,0 +1,216 @@
+body {
+    font-family: arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar container */
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial;
+}
+
+/* Links inside the navbar */
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+
+
+.container {
+    width: 1024px;
+    margin: 0 auto;
+}
+/*https://www.w3schools.com/TAgs/tag_nav.asp*/
+
+.nav {
+    background-color: #070606;
+    color:#ffffff;
+    list-style: none;
+    text-align: left;
+    padding: 20px 0 20px 4px;
+    font-size: 25px;
+}
+.nav > li {
+    display: inline-block;
+    padding-right: 25px;
+}
+.nav > li > a{
+    text-decoration: none;
+    color: white;
+}
+
+.nav > li > a:hover{
+    color:#c1c1c1;
+}
+
+
+
+nav {
+    background-color: #222;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+nav a {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+#logo {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.footer {
+    padding-top: 20px;
+    padding-right: 5px;
+    text-align: right;
+    color: #666666;
+    font-style: italic;
+
+}
+
+/* table styles */
+/* https://www.w3schools.com/html/html_tables.asp */
+
+table {
+    border-collapse: collapse; /*https://www.w3schools.com/CSSref/tryit.asp?filename=trycss_border-collapse3*/
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 5px 8px 5px 8px; /*https://www.w3schools.com/csS/css_padding.asp*/
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+
+input {
+    display: block;
+    width: 50%;
+    padding: .5rem .75rem;
+    font-size: 1rem;
+    line-height: 1.25;
+    color: #495057;
+    background-color: #fff;
+    background-image: none;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: .25rem;
+}
+
+/* Buttons */
+/* https://www.w3schools.com/css/css3_buttons.asp */
+
+.btn {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 7px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 5px; /* https://www.w3schools.com/css/css3_borders.asp */
+    box-shadow: 1px 1px 1px #888888;
+    transition-duration: 0.1s;
+}
+
+.btn-create {
+    background-color: #4CAF50;
+}
+
+/* Green */
+.btn-details {
+    background-color: #4CAF50;
+}
+
+/* Black */
+.btn-ed {
+    background-color: #008CBA;
+}
+
+/* red */
+.btn-del {
+    background-color: #f44336;
+}
+
+/* Red */
+
+.btn:hover {
+    box-shadow: 2px 2px 2px #888888;
+}
+
+.w {
+    width: 20%;
+}
+
+/* input fields */
+
+

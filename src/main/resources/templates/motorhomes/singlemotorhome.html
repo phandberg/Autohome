@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+
+</head>
+<body>
+
+<div class="navbar">
+    <div class="dropdown">
+        <button class="dropbtn">Lejeaftaler
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="/rentaloverview">Lejeaftale Oversigt</a>
+            <a href="/carsearch">Søg og opret lejeaftale</a>
+        </div>
+
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn">Medarbejdere
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="/employees">Medarbejder Oversigt</a>
+            <a href="/createemployee">Opret ny medarbejder</a>
+        </div>
+
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn">Kunder
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="/customers">Kunde Oversigt</a>
+            <a href="/createcustomer">Opret en ny kunde</a>
+        </div>
+
+    </div>
+
+
+    <div class="dropdown">
+        <button class="dropbtn">Motorhomes
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="/motorhomeoverview">Motorhome Oversigt</a>
+            <a href="/createmotorhome">Opret et nyt motorhome</a>
+            <a href="/addtofleet">Tilføj motorhome til udvalg</a>
+
+        </div>
+
+    </div>
+
+
+
+</div>
+
+    <h1>Detaljer</h1>
+
+    <p>Id: <span th:text="${motor.motorhomeId}"></span> </p>
+
+    <p>Antal sæder: <span th:text="${motor.maxSeats}"></span></p>
+
+    <p>prisPerDay: <span th:text="${motor.pricePerDay}"></span> </p>
+
+    <p>Model: <span th:text="${motor.modelName}"></span> </p>
+
+</div>
+</body>
+</html>

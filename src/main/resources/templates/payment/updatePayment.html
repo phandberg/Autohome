@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Update employee</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+<body>
+
+<div class="navbar">
+    <div class="dropdown">
+        <button class="dropbtn">Lejeaftaler
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="/rentaloverview">Lejeaftale Oversigt</a>
+            <a href="/carsearch">Søg og opret lejeaftale</a>
+        </div>
+
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn">Medarbejdere
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="/employees">Medarbejder Oversigt</a>
+            <a href="/createemployee">Opret ny medarbejder</a>
+        </div>
+
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn">Kunder
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="/customers">Kunde Oversigt</a>
+            <a href="/createcustomer">Opret en ny kunde</a>
+        </div>
+
+    </div>
+
+
+    <div class="dropdown">
+        <button class="dropbtn">Motorhomes
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="/motorhomeoverview">Motorhome Oversigt</a>
+            <a href="/createmotorhome">Opret et nyt motorhome</a>
+            <a href="/addtofleet">Tilføj motorhome til udvalg</a>
+
+        </div>
+
+    </div>
+
+
+
+</div>
+
+
+<form action="/updatedrentalpayment" method="post">
+    <label for="rentalId">id</label>
+    <input type="number" name="rentalId" id="rentalId" th:value="${payment.rentalId}" readonly>
+    <br>
+    <label for="pricePerDay">Pris Per Dag</label>
+    <input type="number" name="pricePerDay" id="pricePerDay" th:value="${payment.pricePerDay}">
+    <br>
+    <label for="dropoffPrice">Dropoff Pris</label>
+    <input type="number" name="dropoffPrice" id="dropoffPrice" th:value="${payment.dropoffPrice}">
+    <br>
+    <label for="accessoriesPrice">Accessories Pris:</label>
+    <input type="number" name="accessoriesPrice" id="accessoriesPrice" th:value="${payment.accessoriesPrice}">
+    <br>
+    <label for="cancellationPrice">Cancellation Pris</label>
+    <input type="number" name="cancellationPrice" id="cancellationPrice" th:value="${payment.cancellationPrice}">
+    <br>
+    <label for="fuelPrice">Benzin Pris:</label>
+    <input type="number" name="fuelPrice" id="fuelPrice" th:value="${payment.fuelPrice}">
+    <br>
+    <label for="kilometersDrivenPrice">Kilometer Kørt Pris:</label>
+    <input type="number" name="kilometersDrivenPrice" id="kilometersDrivenPrice" th:value="${payment.kilometersDrivenPrice}">
+    <br>
+    <label for="totalPrice">Samlede Pris:</label>
+    <input type="number" name="totalPrice" id="totalPrice" th:value="${payment.totalPrice}">
+    <br>
+
+    <button type="submit" name="submit" button class="btn btn-create">Update</button>
+</form>
+</div>
+
+</body>
+</html>

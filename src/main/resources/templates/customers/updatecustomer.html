@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Update customer</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+<body>
+
+<div class="navbar">
+    <div class="dropdown">
+        <button class="dropbtn">Lejeaftaler
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="/rentaloverview">Lejeaftale Oversigt</a>
+            <a href="/carsearch">Søg og opret lejeaftale</a>
+        </div>
+
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn">Medarbejdere
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="/employees">Medarbejder Oversigt</a>
+            <a href="/createemployee">Opret ny medarbejder</a>
+        </div>
+
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn">Kunder
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="/customers">Kunde Oversigt</a>
+            <a href="/createcustomer">Opret en ny kunde</a>
+        </div>
+
+    </div>
+
+
+    <div class="dropdown">
+        <button class="dropbtn">Motorhomes
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="/motorhomeoverview">Motorhome Oversigt</a>
+            <a href="/createmotorhome">Opret et nyt motorhome</a>
+            <a href="/addtofleet">Tilføj motorhome til udvalg</a>
+
+        </div>
+
+    </div>
+
+
+
+</div>
+
+
+<div class="container">
+    <form action="/updatedcustomer" method="post">
+
+        <<label th:for="customerId">Kunde ID
+            <input th:type="number" th:name="customerId" th:id="customerId" th:value="${kunde.customerId}" readonly>
+        </label>
+        <br>
+
+        <label th:for="customerFirstName">Fornavn
+            <input th:type="text" th:name="customerFirstName" th:id="customerFirstName" th:value="${kunde.customerFirstName}">
+        </label>
+        <br>
+
+        <label th:for="customerLastName">Efternavn
+        <input th:type="text" th:name="customerLastName" th:id="customerLastName" th:value="${kunde.customerLastName}">
+        </label>
+        <br>
+
+        <label th:for="customerBirthday">Fødselsdag
+            <input th:type="text" th:name="customerBirthday" th:id="customerBirthday" th:value="${kunde.customerBirthday}" pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])">
+        </label>
+        <br>
+
+        <label th:for="customerEmail">Email
+            <input th:type="email" th:name="customerEmail" th:id="customerEmail" th:value="${kunde.customerEmail}">
+        </label>
+        <br>
+
+        <label th:for="customerDriversLicense">Kørekort Nummer
+            <input th:type="number" th:name="customerDriversLicense" th:id="customerDriversLicense" th:value="${kunde.customerDriversLicense}">
+        </label>
+
+        <button type="submit" name="submit" class="btn btn-create">Update</button>
+    </form>
+</div>
+</body>
+</html>

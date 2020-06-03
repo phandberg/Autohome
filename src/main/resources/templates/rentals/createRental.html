@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Enrol students</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+
+</head>
+<body>
+
+<div class="navbar">
+    <div class="dropdown">
+        <button class="dropbtn">Lejeaftaler
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="/rentaloverview">Lejeaftale Oversigt</a>
+            <a href="/carsearch">Søg og opret lejeaftale</a>
+        </div>
+
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn">Medarbejdere
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="/employees">Medarbejder Oversigt</a>
+            <a href="/createemployee">Opret ny medarbejder</a>
+        </div>
+
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn">Kunder
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="/customers">Kunde Oversigt</a>
+            <a href="/createcustomer">Opret en ny kunde</a>
+        </div>
+
+    </div>
+
+
+    <div class="dropdown">
+        <button class="dropbtn">Motorhomes
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="/motorhomeoverview">Motorhome Oversigt</a>
+            <a href="/createmotorhome">Opret et nyt motorhome</a>
+            <a href="/addtofleet">Tilføj motorhome til udvalg</a>
+
+        </div>
+
+    </div>
+
+
+
+</div>
+
+
+    <h1>New student</h1>
+    <form action="/createdrental" method="post"> <!-- dette sker når vi klikker på submit (action)-->
+
+
+        <label for="motorhomeId">Motor Home ID:</label><br>
+        <input type="number" name="motorhomeId" id="motorhomeId" th:value="${motorhome.motorhomeId}" readonly>
+        <br>
+        <label for="customerFirstName">Kundens Fornavn:</label><br>
+        <input type="text" name="customerFirstName" id="customerFirstName">
+        <br>
+        <label for="customerLastName">Kundens Efternavn:</label><br>
+        <input type="text" name="customerLastName" id="customerLastName">
+        <br>
+        <label for="customerBirthday">Kundens Fødselsdag:</label><br>
+        <input type="text" name="customerBirthday" id="customerBirthday" pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])">
+        <br>
+        <label for="customerEmail">Kundens Email:</label><br>
+        <input type="email" name="customerEmail" id="customerEmail">
+        <br>
+        <label for="customerDriversLicense">Kundens Kørekort Nummer:</label><br>
+        <input type="text" name="customerDriversLicense" id="customerDriversLicense">
+        <br>
+        <label for="pickupDate">Start Dato: YYYY/MM/DD</label><br>
+        <input type="text" name="pickupDate" id="pickupDate" pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])">
+        <br>
+        <label for="endDate">Slut Dato: YYYY-MM-DD</label><br>
+        <input type="text" name="endDate" id="endDate" pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])">
+        <br>
+        <label for="pricePerDay">Pris Per Dag:</label><br>
+        <input type="number" name="pricePerDay" id="pricePerDay" th:value="${motorhome.pricePerDay}">
+        <br>
+
+        <label for="season">Vælg En Sæson</label>
+        <select id="season" name="season">
+            <option value="1">Peak</option>
+            <option value="2">Middle</option>
+            <option value="3">Low</option>
+        </select>
+        <br>
+
+        <button type="submit" name="submit" button class="btn btn-create">Opret</button>
+    </form>
+</div>
+
+
+
+
+
+</body>
+</html>
